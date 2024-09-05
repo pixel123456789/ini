@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Callback</title>
+</head>
+<body>
+    <h1>Authorization Code</h1>
+    <p>Please copy the following code and paste it back into the application:</p>
+    <pre id="code"></pre>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        document.getElementById('code').textContent = code || 'No code found';
+    </script>
+</body>
+</html>
